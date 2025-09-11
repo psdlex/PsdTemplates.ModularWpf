@@ -1,0 +1,19 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Color Template
+
+    <Color x:Key="Color">#000000</Color>
+    <SolidColorBrush
+        x:Key="ColorBrush"
+        Color="{StaticResource Color}" />
+
+    -->
+
+    <Color x:Key="GrayPrimary">#212121</Color>
+    <SolidColorBrush
+        x:Key="GrayPrimaryBrush"
+        Color="{StaticResource GrayPrimary}" />
+
+</ResourceDictionary>

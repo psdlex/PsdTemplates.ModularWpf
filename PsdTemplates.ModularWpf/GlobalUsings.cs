@@ -1,0 +1,1 @@
+global using WinApp = global::System.Windows.Application;
