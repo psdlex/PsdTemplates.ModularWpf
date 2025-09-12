@@ -6,7 +6,7 @@ using PsdFramework.ModularWpf.Logging.Extensions;
 
 using PsdUtilities.ApplicationModules.Models;
 
-namespace ModularWpf.Application.Modules;
+namespace PsdTemplates.ModularWpf.Application.Modules;
 
 public sealed class LoggingModule : IApplicationModule
 {

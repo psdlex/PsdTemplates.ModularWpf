@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 
 using PsdFramework.ModularWpf.ExceptionHandling.Models;
 
-namespace ModularWpf.Application;
+namespace PsdTemplates.ModularWpf.Application;
 
 public sealed class GlobalExceptionHandler : IExceptionHandler
 {

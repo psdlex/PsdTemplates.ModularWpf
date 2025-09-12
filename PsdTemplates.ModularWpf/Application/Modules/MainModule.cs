@@ -5,7 +5,7 @@ using PsdUtilities.ApplicationModules.Models;
 using ModularWpf.Modules.Main;
 using PsdFramework.ModularWpf.Vvm;
 
-namespace ModularWpf.Application.Modules;
+namespace PsdTemplates.ModularWpf.Application.Modules;
 
 public sealed class MainModule : IApplicationModule
 {

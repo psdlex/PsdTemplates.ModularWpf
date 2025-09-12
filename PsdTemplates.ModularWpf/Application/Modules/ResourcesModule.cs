@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 using PsdUtilities.ApplicationModules.Models;
 
-namespace ModularWpf.Application.Modules;
+namespace PsdTemplates.ModularWpf.Application.Modules;
 
 public sealed class ResourcesModule : IApplicationModule
 {

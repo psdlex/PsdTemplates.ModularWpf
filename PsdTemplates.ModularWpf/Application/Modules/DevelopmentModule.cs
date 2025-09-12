@@ -4,7 +4,7 @@ using PsdFramework.ModularWpf.ExceptionHandling.Extensions;
 
 using PsdUtilities.ApplicationModules.Models;
 
-namespace ModularWpf.Application.Modules;
+namespace PsdTemplates.ModularWpf.Application.Modules;
 
 public sealed class DevelopmentModule : IApplicationModule
 {
