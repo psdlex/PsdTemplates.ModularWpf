@@ -22,8 +22,9 @@
 	  <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.9" />
 	  <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.9" />
 	  <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
-	  <PackageReference Include="PsdFramework.ModularWpf" Version="1.1.0" />
+	  <PackageReference Include="PsdFramework.ModularWpf" Version="1.2.0" />
 	  <PackageReference Include="PsdFramework.ModularWpf.ExceptionHandling" Version="1.0.0" />
+	  <PackageReference Include="PsdFramework.ModularWpf.Logging" Version="1.1.0" />
 	  <PackageReference Include="PsdUtilities.ApplicationModules" Version="1.1.0" />
 	</ItemGroup>
 
@@ -34,15 +35,6 @@
 	  <None Update="Metadata\appsettings.json">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Reference Include="PsdFramework.ModularWpf">
-	    <HintPath>..\..\PsdFramework.ModularWpf\build\ModularWpf\Debug\net6.0-windows\PsdFramework.ModularWpf.dll</HintPath>
-	  </Reference>
-	  <Reference Include="PsdFramework.ModularWpf.Logging">
-	    <HintPath>..\..\PsdFramework.ModularWpf\build\Logging\Debug\net9.0-windows\PsdFramework.ModularWpf.Logging.dll</HintPath>
-	  </Reference>
 	</ItemGroup>
 
 
