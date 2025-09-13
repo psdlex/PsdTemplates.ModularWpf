@@ -3,6 +3,8 @@ using System.IO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+using PsdTemplates.ModularWpf.Utils;
+
 using PsdUtilities.ApplicationModules;
 
 namespace PsdTemplates.ModularWpf.Application;
@@ -15,7 +17,7 @@ partial class App
         var configuration = BuildConfiguration();
 
         services.AddSingleton<IConfiguration>(configuration);
-        services.RegisterModules(a => a.FullName?.Contains(nameof(ModularWpf)) ?? false, new Dictionary<string, object>()
+        services.RegisterModules(AssemblyUtils.DefaultAssemblyFilter, new Dictionary<string, object>()
         {
             { "configuration", configuration }
         });
