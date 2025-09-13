@@ -1,0 +1,10 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+<ResourceDictionary.MergedDictionaries>
+<ResourceDictionary Source="pack://application:,,,/PsdTemplates.ModularWpf;component/Resources/SharedStyles/Colors.xaml" />
+<ResourceDictionary Source="pack://application:,,,/PsdTemplates.ModularWpf;component/Resources/SharedStyles/Components/Button.xaml" />
+<ResourceDictionary Source="pack://application:,,,/PsdTemplates.ModularWpf;component/Resources/SharedStyles/Components/TextBlock.xaml" />
+<ResourceDictionary Source="pack://application:,,,/PsdTemplates.ModularWpf;component/Resources/SharedStyles/Components/TextBox.xaml" />
+<ResourceDictionary Source="pack://application:,,,/PsdTemplates.ModularWpf;component/Resources/SharedStyles/Components/__Template.xaml" />
+<ResourceDictionary Source="pack://application:,,,/PsdTemplates.ModularWpf;component/Resources/SharedStyles/DataTemplateMaps.xaml" />
+</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

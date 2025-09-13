@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace ModularWpf.Modules.Main;
+namespace PsdTemplates.ModularWpf.Modules.Main;
 
 public sealed partial class MainWindow : Window
 {
