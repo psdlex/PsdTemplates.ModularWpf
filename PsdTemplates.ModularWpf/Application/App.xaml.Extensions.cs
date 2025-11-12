@@ -2,10 +2,10 @@ using System.IO;
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
 using PsdTemplates.ModularWpf.Utils;
 
-using PsdUtilities.ApplicationModules;
+using PsdUtilities.ApplicationModules.Extensions;
+using PsdUtilities.ApplicationModules.Models.Parameters;
 
 namespace PsdTemplates.ModularWpf.Application;
 
@@ -17,17 +17,14 @@ partial class App
         var configuration = BuildConfiguration();
 
         services.AddSingleton<IConfiguration>(configuration);
-        services.RegisterModules(AssemblyUtils.DefaultAssemblyFilter, new Dictionary<string, object>()
-        {
-            { "configuration", configuration }
-        });
+        services.AddModules(AssemblyUtils.DefaultAssemblyFilter, new ApplicationModuleParameter("configuration", configuration));
 
         return services.BuildServiceProvider();
     }
 
     private static IConfigurationRoot BuildConfiguration() => new ConfigurationBuilder()
         .SetBasePath(Directory.GetCurrentDirectory())
-        .AddJsonFile("Metadata/appsettings.json", optional: false, reloadOnChange: true)
-        .AddJsonFile("Metadata/appsettings.Logging.json", optional: false, reloadOnChange: true)
+        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+        .AddJsonFile("appsettings.Logging.json", optional: false, reloadOnChange: true)
         .Build();
 }

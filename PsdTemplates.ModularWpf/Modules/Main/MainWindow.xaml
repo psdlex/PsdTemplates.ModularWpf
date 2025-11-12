@@ -9,7 +9,7 @@
     Width="1024"
     Height="576"
     d:DataContext="{d:DesignInstance Type=main:MainViewModel}"
-    Background="{StaticResource GrayPrimaryBrush}"
+    Background="{StaticResource WhitePrimaryBrush}"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
 

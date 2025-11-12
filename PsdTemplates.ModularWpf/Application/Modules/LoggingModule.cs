@@ -5,26 +5,18 @@ using Microsoft.Extensions.Logging;
 using PsdFramework.ModularWpf.Logging.Extensions;
 
 using PsdUtilities.ApplicationModules.Models;
+using PsdUtilities.ApplicationModules.Models.Parameters;
 
 namespace PsdTemplates.ModularWpf.Application.Modules;
 
-public sealed class LoggingModule : IApplicationModule
+public sealed class LoggingModule : ApplicationModule
 {
-    private readonly IConfiguration _configuration;
-
-    public LoggingModule(IConfiguration configuration)
-    {
-        _configuration = configuration;
-    }
-
-    public ApplicationModuleOrder Order { get; } = ApplicationModuleOrder.Default;
-
-    public void Register(IServiceCollection services)
+    public override void Register(IServiceCollection services, ApplicationModuleParameters parameters)
     {
         services.AddLogging(builder =>
         {
             builder.SetMinimumLevel(LogLevel.Trace);
-            builder.AddPsdFramework(_configuration);
+            builder.AddPsdFramework(parameters.GetParameter<IConfiguration>("configuration"));
         });
     }
 }

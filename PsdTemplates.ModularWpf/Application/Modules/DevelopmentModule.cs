@@ -3,14 +3,13 @@ using Microsoft.Extensions.DependencyInjection;
 using PsdFramework.ModularWpf.ExceptionHandling.Extensions;
 
 using PsdUtilities.ApplicationModules.Models;
+using PsdUtilities.ApplicationModules.Models.Parameters;
 
 namespace PsdTemplates.ModularWpf.Application.Modules;
 
-public sealed class DevelopmentModule : IApplicationModule
+public sealed class DevelopmentModule : ApplicationModule
 {
-    public ApplicationModuleOrder Order { get; } = ApplicationModuleOrder.Default;
-
-    public void Register(IServiceCollection services)
+    public override void Register(IServiceCollection services, ApplicationModuleParameters parameters)
     {
         services.AddExceptionHandlersController();
         services.AddExceptionHandler<GlobalExceptionHandler>();

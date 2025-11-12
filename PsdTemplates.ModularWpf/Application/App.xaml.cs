@@ -1,11 +1,9 @@
 ﻿using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
-
-using PsdTemplates.ModularWpf.Modules.Main;
-
 using PsdFramework.ModularWpf.ExceptionHandling.Extensions;
 using PsdFramework.ModularWpf.General.Models;
-using PsdFramework.ModularWpf.Vvm;
+using PsdFramework.ModularWpf.Views.Models.Representation;
+using PsdTemplates.ModularWpf.Modules.Main;
 
 namespace PsdTemplates.ModularWpf.Application;
 

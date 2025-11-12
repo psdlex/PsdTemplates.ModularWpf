@@ -2,8 +2,9 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <!--
-    <Style TargetType="{x:Type Component}" x:Key="StyleName" />
-    -->
+    <Color x:Key="WhitePrimary">#F7F7F7</Color>
+    <SolidColorBrush
+        x:Key="WhitePrimaryBrush"
+        Color="{StaticResource WhitePrimary}" />
 
 </ResourceDictionary>

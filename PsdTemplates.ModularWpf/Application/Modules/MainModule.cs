@@ -1,18 +1,14 @@
 using Microsoft.Extensions.DependencyInjection;
-
+using PsdFramework.ModularWpf.General.Registration;
 using PsdUtilities.ApplicationModules.Models;
-
-using PsdTemplates.ModularWpf.Modules.Main;
-using PsdFramework.ModularWpf.Vvm;
+using PsdUtilities.ApplicationModules.Models.Parameters;
 
 namespace PsdTemplates.ModularWpf.Application.Modules;
 
-public sealed class MainModule : IApplicationModule
+public sealed class MainModule : ApplicationModule
 {
-    public ApplicationModuleOrder Order { get; } = ApplicationModuleOrder.Default;
-
-    public void Register(IServiceCollection services)
+    public override void Register(IServiceCollection services, ApplicationModuleParameters parameters)
     {
-        services.AddView<MainWindow, MainViewModel>();
+        services.AddComponentModels();
     }
 }
