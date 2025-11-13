@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
     xmlns:main="clr-namespace:PsdTemplates.ModularWpf.Modules.Main"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Main Window"
@@ -13,6 +14,12 @@
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
 
-    <Grid />
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding NavigateToHomePageCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <ContentControl Content="{Binding CurrentModel}" />
 
 </Window>

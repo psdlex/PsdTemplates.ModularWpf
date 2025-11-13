@@ -1,5 +1,11 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+
+    <DataTemplate
+        xmlns:ns="clr-namespace:PsdTemplates.ModularWpf.Modules.HomePage"
+        DataType="{x:Type ns:HomePageViewModel}">
+        <ns:HomePageView />
+    </DataTemplate>
+
 </ResourceDictionary>

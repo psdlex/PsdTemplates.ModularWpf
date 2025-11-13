@@ -1,5 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using PsdFramework.ModularWpf.General.Registration;
+using PsdFramework.ModularWpf.Navigations;
+using PsdFramework.ModularWpf.PopupWindows;
 using PsdUtilities.ApplicationModules.Models;
 using PsdUtilities.ApplicationModules.Models.Parameters;
 
@@ -10,5 +12,7 @@ public sealed class MainModule : ApplicationModule
     public override void Register(IServiceCollection services, ApplicationModuleParameters parameters)
     {
         services.AddComponentModels();
+        services.AddNavigator();
+        services.AddPopupWindowService();
     }
 }
